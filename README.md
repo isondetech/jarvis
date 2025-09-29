@@ -30,7 +30,7 @@ Visit: http://127.0.0.1:8000/docs
 docker compose up --build
 ```
 
-This starts MongoDB and the app (ports 27017 for Mongo, 8000 for API).
+This starts MongoDB and the app (ports 8000 for API).
 
 ---
 
