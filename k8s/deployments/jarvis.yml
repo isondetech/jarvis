@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jarvis
+  labels:
+    app: jarvis-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jarvis-api
+  template:
+    metadata:
+      labels:
+        app: jarvis-api
+    spec:
+      containers:
+      - name: jarvis-api
+        image: vana01/jarvis-api
+        ports:
+        - containerPort: 8000
+        env:
+        - name: MONGO_URI
+          value: mongodb://mongo:27017

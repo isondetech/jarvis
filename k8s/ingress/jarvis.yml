@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jarvis
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - jarvis.api.com
+    secretName: jarvis-tls
+  rules:
+    - host: jarvis.api.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: jarvis
+                port:
+                  number: 8000
