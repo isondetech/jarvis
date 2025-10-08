@@ -4,6 +4,10 @@ metadata:
   name: jarvis
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+      - jarvis.api.com
+    secretName: jarvis-tls
   rules:
     - host: jarvis.api.com
       http:
