@@ -19,3 +19,6 @@ spec:
         image: vana01/jarvis-api
         ports:
         - containerPort: 8000
+        env:
+        - name: MONGO_URI
+          value: mongodb://mongo:27017

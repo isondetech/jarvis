@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: task-pv-volume
+  name: mongo-pv-volume
   labels:
     type: local
 spec:
   storageClassName: manual
   capacity:
-    storage: 0.5Gi
+    storage: 2Gi
   accessModes:
     - ReadWriteOnce
   hostPath:

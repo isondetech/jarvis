@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: jarvis
 spec:
+  type: NodePort
   selector:
     app: jarvis-api
   ports:
-    - protocol: TCP
-      port: 31360
+    - port: 8000
       targetPort: 8000
