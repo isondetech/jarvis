@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jarvice-deployment
+  name: jarvis
   labels:
-    app: jarvice-api
+    app: jarvis-api
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: jarvice-api
+      app: jarvis-api
   template:
     metadata:
       labels:
-        app: jarvice-api
+        app: jarvis-api
     spec:
       containers:
-      - name: jarvice-api
+      - name: jarvis-api
         image: vana01/jarvis-api
         ports:
         - containerPort: 8000
